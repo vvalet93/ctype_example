@@ -1,0 +1,4 @@
+rm *.so
+rm *.o
+g++ -Wall -c -fPIC wrapper.cpp -o wrapper.o
+g++ -Wall -shared -Wl,-soname,libfoo.so -o libfoo.so wrapper.o
