@@ -1,12 +1,14 @@
-#include <iostream>
+#include "foo.h"
 
-class Foo{
-    public:
-        void bar(){
-            std::cout << "Hello Foo" << std::endl;
-        }
+Foo::Foo(){
+    m_imInteger = 15;
+    std::cout << "Instance created " << m_imInteger << std::endl;
+}
 
-    ~Foo(){
-        std::cout << "Bye Foo" << std::endl;
-    }    
-};
+void Foo::bar(){
+        std::cout << "Hello Foo " << m_imInteger << std::endl;
+    }
+
+Foo::~Foo(){
+    std::cout << "Bye Foo" << std::endl;
+}    
